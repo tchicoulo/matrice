@@ -1,33 +1,27 @@
 $(document).ready(function(){
     $(".fill").click(function(){
-        $(".form").addClass("blue");
+        $(".form").addClass("color");
     });
 
     $(".empty").click(function(){
-        $(".form").removeClass("blue");
+        $(".form").removeClass("color");
     });
 
     $(".rond").click(function() {
-      $(this).toggleClass("blue");
+      $(this).toggleClass("color");
     });
 
-//$(".carre").click(function() {
-//  if($(this[".row 1"]).hasClass("nothing")) {
-  //  $(this[".row 1"]).addClass("blue");
-//  } else {
-  ///  $(this[".row 1"]).removeClass("blue");
-//  }
-//});
+    $(".carre").click(function(){
+      if ($(this).hasClass("row1") ) $(".row1").toggleClass('color');
+      if ($(this).hasClass("row2") ) $(".row2").toggleClass('color');
+      if ($(this).hasClass("row3") ) $(".row3").toggleClass('color');
+      if ($(this).hasClass("row4") ) $(".row4").toggleClass('color');
+      if ($(this).hasClass("row5") ) $(".row5").toggleClass('color');
 
-$(".carre").click(function(){
-  if ($(this).hasClass("row 1") ) $(".row 1").toggleClass('blue');
-   else if ( $(this).hasClass('row 1') )   $(".row 2").toggleClass('blue');
-   else if ( $(this).hasClass('row 1') )   $(".row 3").toggleClass('blue');
-   else if ( $(this).hasClass('row 1') )   $(".row 4").toggleClass('blue');
-   else if ( $(this).hasClass('row 1') )   $(".row 5").toggleClass('blue');
+    });
 
- });
-
-
+    $(".losange").click(function(){
+      $(".row3, .col3").toggleClass('color');
+    });
 
 });
